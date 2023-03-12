@@ -1,6 +1,25 @@
 p {
-  @apply text-zinc-800 text-lg dark:text-zinc-300;
+  
+	@apply text-zinc-800 text-lg dark:text-zinc-300;
+
 }
 h1 {
-  @apply font-semibold text-zinc-800 text-xl dark:text-zinc-300;
+  
+	@apply font-semibold text-zinc-800 text-xl dark:text-zinc-300;
+
+}
+ol {
+  
+	@apply list-decimal pl-5 mt-2.5 text-lg dark:text-zinc-300;
+
+}
+li {
+  
+	@apply text-lg text-zinc-800 dark:text-zinc-300 pt-2.5;
+
+}
+a {
+  
+	@apply underline text-lg text-zinc-800 dark:text-zinc-300 cursor-pointer;
+
 }

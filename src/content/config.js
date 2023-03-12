@@ -1,16 +1,16 @@
 // 1. Import utilities from `astro:content`
 import { z, defineCollection } from 'astro:content';
 // 2. Define a schema for each collection you'd like to validate.
-const nextJSCollection = defineCollection({
+const ideasSCollection = defineCollection({
   schema: z.object({
     title: z.string(),
-    tags: z.array(z.string()),
-    image: z.string().optional(),
     description: z.string(),
-    slug: z.string(),
+    date: z.string(),
+    updated_date: z.string(),
+    url: z.string(),
   }),
 });
 // 3. Export a single `collections` object to register your collection(s)
 export const collections = {
-  'next-js': nextJSCollection,
+  'ideas': ideasSCollection,
 };
