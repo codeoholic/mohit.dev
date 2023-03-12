@@ -1,18 +1,6 @@
 ---
-import { getCollection } from 'astro:content';
-export async function getStaticPaths() {
-  
-	const blogEntries = await getCollection('ideas');
-  	return blogEntries.map(entry => ({
-    	
-		params: { slug: entry.slug }, props: { entry },
-
-  	}))
-
-}
-
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+import { getCollection, getEntryBySlug } from 'astro:content';
+const ideasPosts = await getCollection('fundamentals');
 import "../../styles/global.css"
 ---
 <html lang="en">
@@ -21,14 +9,27 @@ import "../../styles/global.css"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Mohit.dev</title>
+		<title>Ideas | Mohit.dev</title>
 	</head>
 	<body>
 		<div class="bg-slate-200 dark:bg-slate-800 w-screen h-full">
 			<div class="container mx-auto px-5 lg:px-0 lg:max-w-4xl min-h-screen">
 				<h1 class="font-bold">Mohit.dev</h1>
-				<Content/>
-			</div>
+		{
+
+            ideasPosts.map( ( post ) => {
+                
+                return (
+                    <a href={ "/fundamentals/" + post.data.url }>
+                        <div>{ post.data.title }</div>
+                    </a>
+                )
+
+            })
+
+        }
+		</div>
 		</div>
 	</body>
 </html>
+

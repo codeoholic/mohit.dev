@@ -1,6 +1,6 @@
 p {
   
-	@apply text-zinc-800 text-lg dark:text-zinc-300;
+	@apply text-zinc-800 text-lg dark:text-zinc-300 mb-5;
 
 }
 h1 {
@@ -10,7 +10,7 @@ h1 {
 }
 ol {
   
-	@apply list-decimal pl-5 mt-2.5 text-lg dark:text-zinc-300;
+	@apply list-decimal pl-5 text-lg dark:text-zinc-300 mb-5;
 
 }
 li {
@@ -20,6 +20,6 @@ li {
 }
 a {
   
-	@apply underline text-lg text-zinc-800 dark:text-zinc-300 cursor-pointer;
+	@apply underline text-lg text-zinc-800 dark:text-zinc-300 cursor-pointer underline-offset-4;
 
 }
