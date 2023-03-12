@@ -1,0 +1,9 @@
+Mohit Tyagi
+Twitter : @mohitdotdev
+Email : hey@mohit.dev
+
+Techonolgy Stack
+- Astro
+- MD
+- Cloudflare Pages
+- Bunny CDN

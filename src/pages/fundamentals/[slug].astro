@@ -15,6 +15,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 import { format } from "date-fns"
 import "../../styles/global.css"
+import Footer from "../../components/Footer.astro"
 ---
 <html lang="en">
 	<head>
@@ -35,6 +36,8 @@ import "../../styles/global.css"
 					<Content/>
 				</div>
 			</div>
+			<Footer />
 		</div>
+		
 	</body>
 </html>
