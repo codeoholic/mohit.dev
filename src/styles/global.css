@@ -20,6 +20,6 @@ li {
 }
 a {
   
-	@apply underline text-lg text-zinc-800 dark:text-zinc-300 cursor-pointer;
+	@apply underline text-lg text-zinc-800 dark:text-zinc-300 cursor-pointer underline-offset-4;
 
 }
