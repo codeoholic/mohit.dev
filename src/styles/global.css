@@ -1,0 +1,6 @@
+p {
+  @apply text-zinc-800 text-lg dark:text-zinc-300;
+}
+h1 {
+  @apply font-semibold text-zinc-800 text-xl dark:text-zinc-300;
+}
