@@ -1,4 +1,7 @@
 ---
+import { Content as AboutContent } from '../content/home/about.md';
+import { Content as SocialMediaContent } from '../content/home/social-media.md';
+import "../styles/global.css"
 ---
 
 <html lang="en">
@@ -7,9 +10,19 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Mohit.dev</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div class="bg-slate-200 dark:bg-slate-800 w-screen h-full">
+			<div class="container mx-auto px-5 lg:px-0 lg:max-w-4xl min-h-screen">
+				<h1 class="font-bold">Mohit.dev</h1>
+				<div class="mt-5">
+					<AboutContent/>
+				</div>
+				<div class="mt-5">
+					<SocialMediaContent/>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
