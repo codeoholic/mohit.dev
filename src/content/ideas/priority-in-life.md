@@ -4,7 +4,6 @@ date: 12/02/2023
 updated_date: 12/02/2023
 description: How to set priorities in life
 url: priority-in-life
-slug: priority-in-life
 ---
 
 It has been a few years now that I am been working towards it. The people who have been around me for long enough have been asked this question over and have discussed about it at length.

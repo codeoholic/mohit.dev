@@ -1,8 +1,18 @@
 ---
-import { getEntryBySlug } from 'astro:content';
-const { slug } = Astro.params;
-const entry = await getEntryBySlug('ideas', slug );
-const { Content} = await entry.render();
+import { getCollection } from 'astro:content';
+export async function getStaticPaths() {
+  
+	const blogEntries = await getCollection('ideas');
+  	return blogEntries.map(entry => ({
+    	
+		params: { slug: entry.slug }, props: { entry },
+
+  	}))
+
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
 import "../../styles/global.css"
 ---
 <html lang="en">
