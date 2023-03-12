@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 export async function getStaticPaths() {
   
-	const blogEntries = await getCollection('ideas');
+	const blogEntries = await getCollection('fundamentals');
   	return blogEntries.map(entry => ({
     	
 		params: { slug: entry.slug }, props: { entry },

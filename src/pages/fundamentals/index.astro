@@ -1,6 +1,6 @@
 ---
 import { getCollection, getEntryBySlug } from 'astro:content';
-const ideasPosts = await getCollection('ideas');
+const ideasPosts = await getCollection('fundamentals');
 import "../../styles/global.css"
 ---
 <html lang="en">
@@ -20,7 +20,7 @@ import "../../styles/global.css"
             ideasPosts.map( ( post ) => {
                 
                 return (
-                    <a href={ "/ideas/" + post.data.url }>
+                    <a href={ "/fundamentals/" + post.data.url }>
                         <div>{ post.data.title }</div>
                     </a>
                 )
