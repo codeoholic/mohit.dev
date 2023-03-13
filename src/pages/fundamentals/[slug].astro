@@ -29,13 +29,16 @@ import Header from "../../components/Header.astro"
 	<body>
 		<div class="bg-slate-200 dark:bg-slate-800 w-screen h-full">
 			<Header />
-			<div class="container mx-auto px-5 lg:px-0 lg:max-w-4xl min-h-screen mt-5">
+			<div class="container mx-auto px-5 lg:px-0 lg:max-w-4xl my-5">
 				<h1 class="font-semibold text-zinc-800 text-3xl dark:text-zinc-300">{ entry.data.title }</h1>
 				<div class="mt-2.5">
 					<div class="text-xs text-zinc-800 dark:text-zinc-300">{ format( new Date( entry.data.date ), "do MMMM yyyy" )  }</div>
 				</div>
 				<div class="mt-5">
 					<Content/>
+				</div>
+				<div class="mt-5">
+					<div class="italic">If you have anything to say or add, please mention me on <a href="https://twitter.com/mohitdotdev" target="_blank">twitter</a> or <a href="mailto:hey@mohit.dev" target="_blank">email</a> me. Managing comments is another task and I do not wish to involve third party softwares.</div>
 				</div>
 			</div>
 			<Footer />
