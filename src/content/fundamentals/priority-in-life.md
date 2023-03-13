@@ -1,7 +1,7 @@
 ---
 title: Priority in Life
-date: 12/02/2023
-updated_date: 12/02/2023
+publish_date: 02/12/2023
+update_date: 02/12/2023
 description: How to set priorities in life
 url: priority-in-life
 ---
