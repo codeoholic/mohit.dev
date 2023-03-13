@@ -1,16 +1,45 @@
-// 1. Import utilities from `astro:content`
-import { z, defineCollection } from 'astro:content';
-// 2. Define a schema for each collection you'd like to validate.
+import { z, defineCollection } from "astro:content";
 const fundamentalsCollection = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    date: z.string(),
-    updated_date: z.string(),
-    url: z.string(),
-  }),
-});
-// 3. Export a single `collections` object to register your collection(s)
+  
+	schema: z.object({
+		
+		title: z.string(),
+		description: z.string(),
+		publish_date: z.string(),
+		update_date: z.string(),
+		url: z.string(),
+	})
+
+})
+const healthCollection = defineCollection({
+  
+	schema: z.object({
+		
+		title: z.string(),
+		description: z.string(),
+		publish_date: z.string(),
+		update_date: z.string(),
+		url: z.string(),
+	})
+
+})
+const wealthCollection = defineCollection({
+  
+	schema: z.object({
+		
+		title: z.string(),
+		description: z.string(),
+		publish_date: z.string(),
+		update_date: z.string(),
+		url: z.string(),
+	})
+
+})
+
 export const collections = {
-  'fundamentals': fundamentalsCollection,
-};
+  
+	"fundamentals": fundamentalsCollection,
+	"health": healthCollection,
+	"wealth": wealthCollection,
+
+}

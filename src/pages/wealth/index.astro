@@ -1,6 +1,6 @@
 ---
 import { getCollection, getEntryBySlug } from 'astro:content';
-const posts = await getCollection('fundamentals');
+const posts = await getCollection('wealth');
 import "../../styles/global.css"
 import Footer from "../../components/Footer.astro"
 import Header from "../../components/Header.astro"
@@ -11,13 +11,13 @@ import Header from "../../components/Header.astro"
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Fundamentals | Mohit.dev</title>
+		<title>Wealth | Mohit.dev</title>
 	</head>
 	<body>
 		<div class="bg-slate-200 dark:bg-slate-800 w-screen h-full">
 			<Header/>
 			<div class="container mx-auto px-5 lg:px-0 lg:max-w-4xl my-10">
-				<h1>Fundamentals</h1>
+				<h1>Wealth</h1>
 				{
 
 					posts.length > 0 &&
@@ -28,7 +28,7 @@ import Header from "../../components/Header.astro"
 								
 								return (
 									<li>
-										<a href={ "/fundamentals/" + post.data.url }>
+										<a href={ "/wealth/" + post.data.url }>
 											<div>{ post.data.title }</div>
 										</a>
 										<div class="mt-2.5">
