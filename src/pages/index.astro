@@ -1,6 +1,7 @@
 ---
 import { Content as AboutContent } from '../content/home/about.md';
 import { Content as SocialMediaContent } from '../content/home/social-media.md';
+import { Content as ProjectsContent } from '../content/home/projects.md';
 import "../styles/global.css"
 import Footer from "../components/Footer.astro"
 import Header from "../components/Header.astro"
@@ -23,6 +24,9 @@ import Header from "../components/Header.astro"
 				</div>
 				<div class="mt-5">
 					<SocialMediaContent/>
+				</div>
+				<div class="mt-5 no-paragraph-margin">
+					<ProjectsContent/>
 				</div>
 			</div>
 			<Footer/>
