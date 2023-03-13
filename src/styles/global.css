@@ -13,6 +13,11 @@ ol {
 	@apply list-decimal pl-5 text-lg dark:text-zinc-300 mb-5;
 
 }
+ul {
+
+	@apply list-disc pl-5 text-lg dark:text-zinc-300 mb-5;
+
+}
 li {
   
 	@apply text-lg text-zinc-800 dark:text-zinc-300 pt-2.5;
@@ -21,5 +26,10 @@ li {
 a {
   
 	@apply underline text-lg text-zinc-800 dark:text-zinc-300 cursor-pointer underline-offset-4;
+
+}
+.no-paragraph-margin p{
+
+	@apply mb-0;
 
 }
