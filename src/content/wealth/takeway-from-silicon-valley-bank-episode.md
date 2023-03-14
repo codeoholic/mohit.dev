@@ -8,7 +8,7 @@ image: https://internetstore.b-cdn.net/mohit/takeway-from-silicon-valley-bank-ep
 ---
 Thinking about the Silicon Valley Bank episode, nobody and especially retail customers would ever want to get into similar situation. Though, the governing body has taken care of the situation, still the fear of missing on life's saving is going to stay with most and people are going to create fail safes.
 
-Coming to a more thoughtful question. **Do Indians even need to bother about such a situation?** I would say, yes.
+Coming to a more thoughtful question. **Do Indians even need to bother about such a situation?** I would say, yes. If this can happen to them, it can happen to us as well.
 
 Currently RBI insures all the saving accounts for **upto ₹5 lakhs**. What this means is incase the bank declares bankruptcy, you will get upto ₹5 lakhs no matter how much your bank balance was over and above ₹5 lakhs. Eg. you have ₹25L, you get ₹5L. You have ₹4.5L, you get ₹4.5L. This is valid for saving accounts and fixed deposits.
 
