@@ -20,9 +20,9 @@ import Header from "../../components/Header.astro"
 ---
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={ Astro.generator } />
 		<title>Fundamentals - { entry.data.title } | Mohit.dev</title>
 	</head>
@@ -42,7 +42,7 @@ import Header from "../../components/Header.astro"
 					<div class="text-xs text-zinc-800 dark:text-zinc-300">{ format( new Date( entry.data.update_date ), "do MMMM yyyy" )  }</div>
 				</div>
 				<div class="mt-5">
-					<div class="italic">If you have anything to say or add, please message/mention me on <a href="https://twitter.com/mohitdotdev" target="_blank">twitter</a> or <a href="mailto:hey@mohit.dev" target="_blank">email</a> me.</div>
+					<div class="text-zinc-800 dark:text-zinc-300">If you have anything to say or add, please message/mention me on <a href="https://twitter.com/mohitdotdev" target="_blank">twitter</a> or <a href="mailto:hey@mohit.dev" target="_blank">email</a> me.</div>
 				</div>
 			</div>
 			<Footer />
