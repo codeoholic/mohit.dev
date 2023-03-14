@@ -28,11 +28,13 @@ import Header from "../../components/Header.astro"
 								
 								return (
 									<li>
-										<a href={ "/wealth/" + post.data.url }>
-											<div>{ post.data.title }</div>
-										</a>
-										<div class="mt-2.5">
-											<div class="text-base text-zinc-800">{ post.data.description }</div>
+										<div>
+											<a href={ "/wealth/" + post.data.url }>
+												<div>{ post.data.title }</div>
+											</a>
+											<div class="mt-2.5">
+												<div class="text-base text-zinc-800">{ post.data.description }</div>
+											</div>
 										</div>
 									</li>
 								)
