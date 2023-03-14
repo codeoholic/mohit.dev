@@ -32,6 +32,8 @@ const wealthCollection = defineCollection({
 		publish_date: z.string(),
 		update_date: z.string(),
 		url: z.string(),
+		image: z.string(),
+
 	})
 
 })
