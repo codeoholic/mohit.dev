@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
 export async function getStaticPaths() {
-  
+
 	const blogEntries = await getCollection('wealth');
   	return blogEntries.map(entry => ({
-    	
+
 		params: { slug: entry.slug }, props: { entry },
 
   	}))
@@ -24,7 +24,7 @@ import Header from "../../components/Header.astro"
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="generator" content={ Astro.generator } />
-		
+
 		<!-- Primary Meta Tags -->
 		<title>Wealth - { entry.data.title } | Mohit.dev</title>
 		<meta name="title" content={ "Wealth - " + entry.data.title +" | Mohit.dev" }/>
@@ -46,7 +46,7 @@ import Header from "../../components/Header.astro"
 
 	</head>
 	<body>
-		<div class="bg-slate-200 dark:bg-slate-800 w-screen h-full">
+		<div class="bg-slate-200 dark:bg-slate-800 w-screen min-h-screen">
 			<Header />
 			<div class="container mx-auto px-5 lg:px-0 lg:max-w-4xl my-5">
 				<h1 class="font-semibold text-zinc-800 text-3xl dark:text-zinc-300">{ entry.data.title }</h1>
@@ -64,11 +64,11 @@ import Header from "../../components/Header.astro"
 					<div class="text-zinc-800 dark:text-zinc-300 font-light">Disclaimer: None of this is a financial advice but my personal opinion. Please do your own research before making any financial decision.</div>
 				</div>
 				<div class="mt-5">
-					<div class="text-zinc-800 dark:text-zinc-300">If you have anything to say or add, please message/mention me on <a href="https://twitter.com/mohitdotdev" target="_blank">twitter</a> or <a href="mailto:hey@mohit.dev" target="_blank">email</a> me.</div>
+					<div class="text-zinc-800 dark:text-zinc-300">If you have anything to say or add, please message/mention me on <a href="https://twitter.com/mohitdotdev" target="_blank">twitter</a> or <a href="mailto:hey@mohit.dev" target="_blank">email</a> me. I will make sure to respond.</div>
 				</div>
 			</div>
 			<Footer />
 		</div>
-		
+
 	</body>
 </html>
