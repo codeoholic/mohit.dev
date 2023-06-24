@@ -5,7 +5,17 @@ p {
 }
 h1 {
 
-	@apply font-semibold text-zinc-800 text-xl dark:text-zinc-300 pb-2;
+	@apply font-semibold text-zinc-800 text-base md:text-xl dark:text-zinc-300 pb-2;
+
+}
+h2 {
+
+	@apply font-semibold text-zinc-800 text-base md:text-lg dark:text-zinc-300 pb-2;
+
+}
+h3 {
+
+	@apply font-semibold text-zinc-800 text-base dark:text-zinc-300 pb-2;
 
 }
 ol {
@@ -26,6 +36,12 @@ li {
 a {
 
 	@apply underline text-base md:text-lg text-zinc-800 dark:text-zinc-300 cursor-pointer underline-offset-4;
+
+}
+
+h3 a {
+
+	@apply font-semibold text-zinc-800 text-base dark:text-zinc-300 underline;
 
 }
 .no-paragraph-margin p{
