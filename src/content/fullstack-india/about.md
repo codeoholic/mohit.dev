@@ -1,7 +1,7 @@
 # Full Stack India
 I plan to build a developers community to help undergrads learn and get the right skill set to make money.
 1. Frontend - Astro, NextJS, Tailwind
-2. Backend - NodeJS, PHP
+2. Backend - JS, NodeJS, PHP
 3. Database - Relational and non-relational
 4. Mobile - React Native
 
@@ -13,5 +13,23 @@ I have created a *[telegram](https://t.me/fullstackindia)* group for quick acces
 Devs are also invited to take part in this initiative. Also, open to suggestions.
 
 # Sections
-- ## Frontend
-1. ### [Tailwind](https://mohit.dev/fullstack-india/tailwind)
+## Frontend
+
+The way I define and choose technology stack is simple.
+- Building a static website - [Astro](/fullstack-india/astro).
+- Building a dynamic website - [NextJS](/fullstack-india/nextjs).
+
+In both the cases I use [Tailwind](/fullstack-india/tailwind) to design the UI.
+
+### Deployed at
+
+- Static website - [Cloudflare Pages](/fullstack-india/cloudlfare-pages)
+- Dynamic website - [Vercel](/fullstack-india/vercel)
+
+## Backend
+
+This is where this gets intersting. I would recommend everybody to use Cloudflare Workers to write their backend API as it is one of the simplest and the cheapest way to get started.
+
+Alternatively we can also talk about NodeJS Express as an alternative and build upon it as the need be.
+
+- [Cloudflare Workers](/fullstack-india/cloudlfare-workers)
