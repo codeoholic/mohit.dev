@@ -13,5 +13,10 @@ I have created a *[telegram](https://t.me/fullstackindia)* group for quick acces
 Devs are also invited to take part in this initiative. Also, open to suggestions.
 
 # Sections
-- ## Frontend
-1. ### [Tailwind](https://mohit.dev/fullstack-india/tailwind)
+## Frontend
+
+The way I define and choose technology stack is simple.
+- Building a static website - [Astro](https://mohit.dev/fullstack-india/astro).
+- Building a dynamic website - [NextJS](https://mohit.dev/fullstack-india/nextjs).
+
+In both the cases I use [Tailwind](https://mohit.dev/fullstack-india/tailwind) to design the UI.
