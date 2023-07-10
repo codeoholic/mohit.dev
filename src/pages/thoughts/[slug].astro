@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+export async function getStaticPaths() {
+
+	const blogEntries = await getCollection('thoughts');
+  	return blogEntries.map(entry => ({
+
+		params: { slug: entry.slug }, props: { entry },
+
+  	}))
+
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+import { format } from "date-fns"
+import "../../styles/global.css"
+import Footer from "../../components/Footer.astro"
+import Header from "../../components/Header.astro"
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={ Astro.generator } />
+		<title>Thoughts - { entry.data.title } | Mohit.dev</title>
+	</head>
+	<body>
+		<div class="bg-slate-200 dark:bg-slate-800 w-screen min-h-screen">
+			<Header />
+			<div class="container mx-auto px-5 lg:px-0 lg:max-w-4xl my-5">
+				<h1 class="font-semibold text-zinc-800 text-3xl dark:text-zinc-300">{ entry.data.title }</h1>
+				<div class="mt-2.5">
+					<div class="text-xs text-zinc-800 dark:text-zinc-300">{ format( new Date( entry.data.publish_date ), "do MMMM yyyy" )  }</div>
+				</div>
+				<div class="mt-5">
+					<Content/>
+				</div>
+				<div class="mt-2.5">
+					<div class="text-sm text-zinc-800 dark:text-zinc-300">Last update</div>
+					<div class="text-xs text-zinc-800 dark:text-zinc-300">{ format( new Date( entry.data.update_date ), "do MMMM yyyy" )  }</div>
+				</div>
+				<div class="mt-5">
+					<div class="italic">If you have anything to say or add, please mention me on <a href="https://twitter.com/mohitdotdev" target="_blank">twitter</a> or <a href="mailto:hey@mohit.dev" target="_blank">email</a> me. Managing comments is another task and I do not wish to involve third party softwares.</div>
+				</div>
+			</div>
+			<Footer />
+		</div>
+
+	</body>
+</html>
