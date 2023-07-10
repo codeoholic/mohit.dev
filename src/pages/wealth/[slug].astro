@@ -17,6 +17,7 @@ import { format } from "date-fns"
 import "../../styles/global.css"
 import Footer from "../../components/Footer.astro"
 import Header from "../../components/Header.astro"
+import PostPost from '../../components/PostPost.astro';
 ---
 <html lang="en">
 	<head>
@@ -63,9 +64,7 @@ import Header from "../../components/Header.astro"
 				<div class="mt-5">
 					<div class="text-zinc-800 dark:text-zinc-300 font-light">Disclaimer: None of this is a financial advice but my personal opinion. Please do your own research before making any financial decision.</div>
 				</div>
-				<div class="mt-5">
-					<div class="text-zinc-800 dark:text-zinc-300">If you have anything to say or add, please message/mention me on <a href="https://twitter.com/mohitdotdev" target="_blank">twitter</a> or <a href="mailto:hey@mohit.dev" target="_blank">email</a> me. I will make sure to respond.</div>
-				</div>
+				<PostPost/>
 			</div>
 			<Footer />
 		</div>
