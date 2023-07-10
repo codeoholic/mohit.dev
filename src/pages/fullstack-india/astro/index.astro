@@ -1,4 +1,6 @@
 ---
+import { getCollection } from 'astro:content';
+const posts = await getCollection('astro');
 import { Content as AboutContent } from '../../../content/fullstack-india/astro/about.md';
 import "../../../styles/global.css"
 import Footer from "../../../components/Footer.astro"
@@ -17,6 +19,33 @@ import Header from "../../../components/Header.astro"
 			<Header/>
 			<div class="container mx-auto px-5 lg:px-0 lg:max-w-4xl my-10">
                 <AboutContent/>
+				{
+
+					posts.length > 0 &&
+					<ol>
+						{
+
+							posts.map( ( post ) => {
+
+								return (
+									<li>
+										<div>
+											<a href={ "/fullstack-india/astro/" + post.data.url }>
+												<div>{ post.data.title }</div>
+											</a>
+											<div class="mt-2.5">
+												<div class="text-base text-zinc-800 dark:text-zinc-300">{ post.data.description }</div>
+											</div>
+										</div>
+									</li>
+								)
+
+							})
+
+						}
+					</ol>
+
+				}
 			</div>
 			<Footer/>
 		</div>

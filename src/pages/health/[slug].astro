@@ -17,6 +17,7 @@ import { format } from "date-fns"
 import "../../styles/global.css"
 import Footer from "../../components/Footer.astro"
 import Header from "../../components/Header.astro"
+import PostPost from '../../components/PostPost.astro';
 ---
 <html lang="en">
 	<head>
@@ -41,9 +42,7 @@ import Header from "../../components/Header.astro"
 					<div class="text-sm text-zinc-800 dark:text-zinc-300">Last update</div>
 					<div class="text-xs text-zinc-800 dark:text-zinc-300">{ format( new Date( entry.data.update_date ), "do MMMM yyyy" )  }</div>
 				</div>
-				<div class="mt-5">
-					<div class="italic">If you have anything to say or add, please mention me on <a href="https://twitter.com/mohitdotdev" target="_blank">twitter</a> or <a href="mailto:hey@mohit.dev" target="_blank">email</a> me. Managing comments is another task and I do not wish to involve third party softwares.</div>
-				</div>
+				<PostPost/>
 			</div>
 			<Footer />
 		</div>

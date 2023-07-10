@@ -38,6 +38,11 @@ a {
 	@apply underline text-base md:text-lg text-zinc-800 dark:text-zinc-300 cursor-pointer underline-offset-4;
 
 }
+pre {
+
+	@apply bg-zinc-700 p-4 text-sm;
+
+}
 
 h3 a {
 
