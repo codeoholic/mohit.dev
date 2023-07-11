@@ -1,0 +1,29 @@
+---
+title: Adding timestamp on record update and insert
+publish_date: 07/10/2023
+update_date: 07/10/2023
+description: Adding timestamp on record update and insert in MySQL
+url: adding-timestamp-on-record-update-and-insert
+---
+We are going to run the alter table command and use timestamp as the data type. For the sake of simplicity, I use `created_at` and `update_at` column names. The first one is for when the record was created and the second one for when the record was last updated.
+
+When a fresh record is inserted, both the values are going to be same as, `current_timestamp` is the time when record was inserted as well as updated. When update will run, only `update_at` value will be updated.
+
+Adding `created_at` column.
+```
+ALTER TABLE table_name
+ADD COLUMN created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
+```
+
+Adding `update_at` column.
+```
+ALTER TABLE table_name
+ADD COLUMN update_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+```
+
+You can create both the fields at the same time too.
+```
+ALTER TABLE table_name
+ADD COLUMN created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ADD COLUMN update_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+```

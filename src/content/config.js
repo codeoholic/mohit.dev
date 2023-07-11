@@ -63,12 +63,26 @@ const astroCollection = defineCollection({
 	})
 
 })
+const mysqlCollection = defineCollection({
+
+	schema: z.object({
+
+		title: z.string(),
+		description: z.string(),
+		publish_date: z.string(),
+		update_date: z.string(),
+		url: z.string(),
+
+	})
+
+})
 
 export const collections = {
 
 	"astro": astroCollection,
 	"fundamentals": fundamentalsCollection,
 	"health": healthCollection,
+	"mysql": mysqlCollection,
 	"thoughts": thoughtsCollection,
 	"wealth": wealthCollection,
 
