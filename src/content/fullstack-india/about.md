@@ -33,3 +33,7 @@ This is where this gets intersting. I would recommend everybody to use Cloudflar
 Alternatively we can also talk about NodeJS Express as an alternative and build upon it as the need be.
 
 - [Cloudflare Workers](/fullstack-india/cloudlfare-workers)
+
+## Database
+
+- [MySQL](/fullstack-india/mysql)

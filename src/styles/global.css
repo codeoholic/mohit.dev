@@ -49,6 +49,10 @@ h3 a {
 	@apply font-semibold text-zinc-800 text-base dark:text-zinc-300 underline;
 
 }
+code {
+
+	@apply text-sm;
+}
 .no-paragraph-margin p{
 
 	@apply mb-0;
