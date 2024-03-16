@@ -10,6 +10,11 @@ export async function getStaticPaths() {
   	}))
 
 }
+
+const coursesEntries = await getCollection("courses");
+
+console.log( coursesEntries )
+
 const { entry } = Astro.props;
 // console.log("we are here", entry)
 
@@ -21,6 +26,9 @@ import Layout from "@/layouts/Layouts/index.astro"
 import Header from "@/components/Header.astro"
 
 const { Content } = await entry.render();
+
+const tags = entry.data.tags.split(",")
+console.log( entry.data.tags )
 ---
 <Layout
     title={ entry.data.title }
@@ -31,10 +39,34 @@ const { Content } = await entry.render();
         <div class="grid grid-cols-3 mt-4 gap-4">
             <div class="col-span-2 bg-white border rounded p-4 space-y-4">
                 <h1 class="text-3xl font-bold">{ entry.data.title }</h1>
+                <div class="flex gap-4">
+                    {
+
+                        tags.map( ( value ) => {
+
+                            return (
+                                <a href={ "/topic/" + value.toLowerCase() }>
+                                    <div>#{ value }</div>
+                                </a>
+                            )
+
+                        })
+
+                    }
+                </div>
                 <Content/>
             </div>
             <div class="col-span-1 bg-white border rounded p-4">
-                b
+                <h2>Courses</h2>
+                <a href="/course/astro-js">
+                    <p>Get Started with AstroJS</p>
+                </a>
+                <p>Course on React</p>
+                <p>Course on Tailwind</p>
+                <p>Course on React Native</p>
+                <p>Course on Express</p>
+                <p>Course on Cloudflare Worker</p>
+                <p>Course on Rust</p>
             </div>
         </div>
     </Container>
