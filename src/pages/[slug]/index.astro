@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 export async function getStaticPaths() {
 
-	const blogEntries = await getCollection('blogs');
+	const blogEntries = await getCollection("blogs");
   	return blogEntries.map(entry => ({
 
 		params: { slug: entry.data.url }, props: { entry },
@@ -20,6 +20,7 @@ import Layout from "@/layouts/Layouts/index.astro"
 // COMPONENTS
 import Header from "@/components/Header.astro"
 
+const { Content } = await entry.render();
 ---
 <Layout
     title={ entry.data.title }
@@ -27,6 +28,14 @@ import Header from "@/components/Header.astro"
 >
     <Header />
     <Container>
-        hello
+        <div class="grid grid-cols-3 mt-4 gap-4">
+            <div class="col-span-2 bg-white border rounded p-4 space-y-4">
+                <h1 class="text-3xl font-bold">{ entry.data.title }</h1>
+                <Content/>
+            </div>
+            <div class="col-span-1 bg-white border rounded p-4">
+                b
+            </div>
+        </div>
     </Container>
 </Layout>
