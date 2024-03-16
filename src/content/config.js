@@ -76,6 +76,19 @@ const mysqlCollection = defineCollection({
 	})
 
 })
+const blogsCollection = defineCollection({
+
+	schema: z.object({
+
+		title: z.string(),
+		description: z.string(),
+		publish_date: z.string(),
+		update_date: z.string(),
+		url: z.string(),
+
+	})
+
+})
 
 export const collections = {
 
@@ -85,5 +98,6 @@ export const collections = {
 	"mysql": mysqlCollection,
 	"thoughts": thoughtsCollection,
 	"wealth": wealthCollection,
+	"blogs": blogsCollection
 
 }
