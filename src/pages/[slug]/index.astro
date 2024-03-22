@@ -19,11 +19,11 @@ const { entry } = Astro.props;
 // console.log("we are here", entry)
 
 // LAYOUTS
-import Container from "@/layouts/Container/index.astro"
-import Layout from "@/layouts/Layouts/index.astro"
+import Container from "@/layouts/container/index.astro"
+import Layout from "@/layouts/layout/index.astro"
 
 // COMPONENTS
-import Header from "@/components/Header.astro"
+import Header from "@/components/common/header/index.astro"
 
 const { Content } = await entry.render();
 

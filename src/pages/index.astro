@@ -31,15 +31,16 @@ import HeadingOne from "@/atoms/headings/one/index.astro"
 
 					blogs.map( ( value ) => {
 
-						return (
-							<div class="w-fit">
-								<a href={ "/" + value.data.url } class="underline-none">
-									<h2 class="text-2xl font-bold underline">{ value.data.title }</h2>
-								</a>
-								<p class="font-light">{ value.data.description }</p>
-								<p class="font-light">{ value.data.publish_date }</p>
-							</div>
-						)
+						// if( value.data.is_published )
+							return (
+								<div class="w-fit">
+									<a href={ "/" + value.data.url } class="underline-none">
+										<h2 class="text-2xl font-bold underline">{ value.data.title }</h2>
+									</a>
+									<p class="font-light">{ value.data.description }</p>
+									<p class="font-light">{ value.data.publish_date }</p>
+								</div>
+							)
 
 					})
 
