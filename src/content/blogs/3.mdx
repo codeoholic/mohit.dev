@@ -1,0 +1,29 @@
+---
+description: Thinking about the Silicon Valley Bank episode, nobody and especially retail customers would ever want to get into similar situation.
+image: https://internetstore.b-cdn.net/mohit/takeway-from-silicon-valley-bank-episode.png
+publish_date: 03/22/2024
+tags: "React, Shadcn UI, React Day Picker"
+title: Disable dates on Shadcn UI Calendar Component and React Day Picker
+update_date: 03/22/2024
+url: disable-dates-on-shadcn-ui-calendar-component-and-react-day-picker
+---
+1. Specific dates can be disabled using an array.
+```js
+disabled={[ new Date(2024, 03, 22)] }
+```
+Multiple dates can be also be disabled
+```js
+disabled={[ new Date(2024, 03, 21), new Date(2024, 03, 22)] }
+```
+2. Future dates can be disabled using **after** key.
+\
+This would disable all future dates.
+```js
+disabled={{ after: new Date() }}
+```
+3. Past dates can be disabled using **before** key.
+\
+This would disable days which are more than 7 days old. I am subDays can be used from [date-fns](https://www.mohit.dev/topic/date-fns).
+```js
+disabled={{ before: subDays( new Date(), 7 ) }}
+```
