@@ -6,6 +6,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://mohit.dev',
+  site: 'https://www.mohit.dev',
   integrations: [tailwind(), mdx(), sitemap()]
 });
