@@ -2,34 +2,50 @@
 import { Content as AboutContent } from '../content/home/about.md';
 import { Content as SocialMediaContent } from '../content/home/social-media.md';
 import { Content as ProjectsContent } from '../content/home/projects.md';
-import "../styles/global.css"
-import Footer from "../components/Footer.astro"
-import Header from "../components/Header.astro"
----
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Mohit.dev</title>
-	</head>
-	<body>
-		<div class="bg-slate-200 dark:bg-slate-800 w-screen h-full">
-			<Header />
-			<div class="container mx-auto px-5 lg:px-0 lg:max-w-4xl min-h-screen">
-				<div class="mt-5">
-					<AboutContent/>
-				</div>
-				<div class="mt-5">
-					<SocialMediaContent/>
-				</div>
-				<div class="mt-5 no-paragraph-margin">
-					<ProjectsContent/>
-				</div>
+import { getCollection } from 'astro:content';
+const blogs = await getCollection("blogs");
+
+// LAYOUTS
+import Container from "@/layouts/container/index.astro"
+import Layout from "@/layouts/layout/index.astro"
+
+// COMPONENTS
+import Footer from "@/components/common/footer/index.astro"
+import Header from "@/components/common/header/index.astro"
+
+// ATOMS
+import HeadingOne from "@/atoms/headings/one/index.astro"
+
+---
+<Layout
+	title="mohit.dev"
+	description=""
+>
+	<Header />
+	<Container>
+		<div class="grid grid-cols-1 md:grid-cols-3 my-4 gap-4 min-h-[calc(100vh-6rem)]">
+            <div class="col-span-2 bg-white border rounded p-4 space-y-4">
+				<HeadingOne>Articles</HeadingOne>
+				{
+
+					blogs.map( ( value ) => {
+
+						return (
+							<div class="w-fit">
+								<a href={ "/" + value.data.url } class="underline-none">
+									<h2 class="text-2xl font-bold underline">{ value.data.title }</h2>
+								</a>
+								<p class="font-light">{ value.data.description }</p>
+								<p class="font-light">{ value.data.publish_date }</p>
+							</div>
+						)
+
+					})
+
+				}
 			</div>
-			<Footer/>
 		</div>
-	</body>
-</html>
+	</Container>
+	<Footer/>
+</Layout>
