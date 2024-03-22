@@ -1,0 +1,73 @@
+---
+
+import { getCollection } from 'astro:content';
+export async function getStaticPaths() {
+
+	const blogEntries = await getCollection("topic");
+  	return blogEntries.map(entry => ({
+
+		params: { slug: entry.data.url }, props: { entry },
+
+  	}))
+
+}
+
+
+const { entry } = Astro.props;
+
+// GET ALL BLOG POSTS
+const blogEntries = await getCollection("blogs");
+
+let blogs = []
+// LOOP THROUGH THE ENTRIES
+blogEntries.map( ( value ) => {
+
+    let tags = value.data.tags
+    tags = tags.split(",")
+    tags.map( ( data ) => {
+
+        if( data.toLowerCase().replace(/ /g,"-") === entry.data.url ){
+
+            blogs.push( value )
+
+        }
+
+    })
+
+})
+
+// LAYOUTS
+import Container from "@/layouts/Container/index.astro"
+import Layout from "@/layouts/Layouts/index.astro"
+
+// COMPONENTS
+import Header from "@/components/Header.astro"
+---
+<Layout
+    title={ entry.data.title }
+    description={ entry.data.description }
+>
+    <Header />
+    <Container>
+        <div class="grid grid-cols-1 md:grid-cols-3 my-4 gap-4 min-h-[calc(100vh-6rem)]">
+            <div class="col-span-2 bg-white border rounded p-4 space-y-4">
+                {
+
+                    blogs.map( ( value ) => {
+
+                        return (
+                            <div class="w-fit">
+                                <a href={ "/" + value.data.url }>
+                                    <h2 class="text-2xl font-bold">{ value.data.title }</h2>
+                                </a>
+                                <p class="text-base">{ value.data.description }</p>
+                            </div>
+                        )
+
+                    })
+
+                }
+            </div>
+        </div>
+    </Container>
+</Layout>
