@@ -45,7 +45,7 @@ console.log( entry.data.tags )
                         tags.map( ( value ) => {
 
                             return (
-                                <a href={ "/topic/" + value.toLowerCase() }>
+                                <a href={ "/topic/" + value.toLowerCase().replace(/ /g,"-") }>
                                     <div>#{ value }</div>
                                 </a>
                             )
