@@ -8,8 +8,9 @@ update_date: 03/22/2024
 url: disable-dates-on-shadcn-ui-calendar-component-and-react-day-picker
 is_published: true
 ---
-import { format, lastDayOfMonth } from 'date-fns'
+
 ```js
+import { format, lastDayOfMonth } from 'date-fns'
 const today = new Date()
 const firstDateOfMonth = format(today, 'yyyy-MM-01')
 const lastDateOfMonth = format(lastDayOfMonth(today), 'yyyy-MM-dd')

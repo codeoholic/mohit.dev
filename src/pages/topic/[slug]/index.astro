@@ -37,11 +37,11 @@ blogEntries.map( ( value ) => {
 })
 
 // LAYOUTS
-import Container from "@/layouts/Container/index.astro"
-import Layout from "@/layouts/Layouts/index.astro"
+import Container from "@/layouts/container/index.astro"
+import Layout from "@/layouts/layout/index.astro"
 
 // COMPONENTS
-import Header from "@/components/Header.astro"
+import Header from "@/components/common/header/index.astro"
 ---
 <Layout
     title={ entry.data.title }
