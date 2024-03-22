@@ -102,16 +102,29 @@ const coursesCollection = defineCollection({
 	})
 
 })
+const topicCollection = defineCollection({
+
+	schema: z.object({
+
+		description: z.string(),
+		is_active: z.boolean(),
+		title: z.string(),
+		url: z.string(),
+
+	})
+
+})
 
 export const collections = {
 
 	"astro": astroCollection,
+	"blogs": blogsCollection,
+	"courses": coursesCollection,
 	"fundamentals": fundamentalsCollection,
 	"health": healthCollection,
 	"mysql": mysqlCollection,
 	"thoughts": thoughtsCollection,
+	"topic": topicCollection,
 	"wealth": wealthCollection,
-	"blogs": blogsCollection,
-	"courses": coursesCollection,
 
 }
