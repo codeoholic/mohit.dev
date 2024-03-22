@@ -1,24 +1,20 @@
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-90J0SNHXVV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-90J0SNHXVV');
-</script>
+---
+import Container from "@/layouts/Container/index.astro"
+---
 <div class="bg-slate-50 dark:bg-slate-800 h-16 border-b border-b-slate-300 dark:border-b-slate-900 dark:shadow-md">
-    <div class="max-w-4xl container mx-auto h-full flex items-center justify-between px-5 md:p-0">
-        <a href="/" class="no-underline">
-            <div class="text-xl text-slate-900 dark:text-slate-50 font-bold">Mohit</div>
-        </a>
-        <div class="h-6 w-6 relative">
-            <a href="https://twitter.com/mohitdotdev" target="_blank">
-                <img
-                    src="/twitter.svg"
-                    alt="twitter_icon"
-                />
+    <Container>
+        <div class="flex justify-between items-center h-full">
+            <a href="/" class="no-underline">
+                <div class="text-xl text-slate-900 dark:text-slate-50 font-bold">mohit.dev</div>
             </a>
+            <div class="h-6 w-6 relative">
+                <a href="https://twitter.com/mohitdotdev" target="_blank">
+                    <img
+                        src="/twitter.svg"
+                        alt="twitter_icon"
+                    />
+                </a>
+            </div>
         </div>
-    </div>
+    </Container>
 </div>

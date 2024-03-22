@@ -1,0 +1,23 @@
+---
+title: Adding Google Analytics to Astro
+publish_date: 07/10/2023
+update_date: 07/10/2023
+description: How to add Adding Google Analytics to Astro
+url: adding-google-analytics-to-astro
+---
+Since Astro supports Scripts tag, this should be fairly simple. Just paste the entire Google Analytics Script tag in the file which common in your platform and you are good to go.
+
+I have added it inside my header component as it is one common piece on the website.
+
+```js
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-90J0SNHXVV"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-90J0SNHXVV');
+</script>
+```
+\
+View on [YouTube Link](https://abc.com)
