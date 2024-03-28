@@ -1,2 +1,0 @@
-# About
-Hey! Welcome to my website. This might sound like that it has been written in early 2000's but it is not. With time I am going to add text to the website and to start with I am showcasing my reading list for the year 2023. My idea of having a platform to keep things more permanent. A place where if needed to know about me, you can quickly judge the depth or shallowness of my ideas and notions.

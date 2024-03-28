@@ -1,0 +1,15 @@
+---
+title: Filter query by date in PostgreSQL
+publish_date: 03/28/2024
+update_date: 03/28/2024
+description: Filter query by date in PostgreSQL
+url: filter-query-by-date-in-postgresql
+is_published: true
+tags: "PostgreSQL"
+---
+This is how PostgreSQL is different from MySQL.
+You have to cast the date string using ```::date```
+
+```js
+SELECT field FROM table WHERE some_date >= '2024-03-28'::date;
+```

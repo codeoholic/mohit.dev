@@ -54,6 +54,11 @@ code {
 	@apply text-sm rounded;
 
 }
+p code {
+
+	@apply text-sm rounded bg-zinc-700 px-2 py-1 text-white;
+
+}
 .no-paragraph-margin p{
 
 	@apply mb-0;

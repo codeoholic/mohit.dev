@@ -1,10 +1,11 @@
 ---
-import { Content as AboutContent } from '../content/home/about.md';
-import { Content as SocialMediaContent } from '../content/home/social-media.md';
-import { Content as ProjectsContent } from '../content/home/projects.md';
 
-import { getCollection } from 'astro:content';
-const blogs = await getCollection("blogs");
+// GET COLLECTION
+import { getCollection } from 'astro:content'
+let blogs = await getCollection("blogs")
+
+// SORT COLLECTION BY PUBLISH DATE
+blogs = blogs.sort( ( a, b ) => new Date( b.data.publish_date ) - new Date( a.data.publish_date ) )
 
 // LAYOUTS
 import Container from "@/layouts/container/index.astro"
